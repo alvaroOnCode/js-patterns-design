@@ -1,5 +1,5 @@
 /**
- * Compositing | Part 1
+ * Composing | Part 1
  */
 
 // Data
@@ -23,5 +23,5 @@ console.log(getFirstChild(users));
 /**
  * - Warning! -
  * This is a very clean code but it is kind of difficult to read.
- * Check 2-compositing.js for an improved version.
+ * Check 2-composing.js for an improved version.
  */
