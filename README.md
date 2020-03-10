@@ -31,6 +31,7 @@ The course language is Spanish but exercises are written and commented in Englis
     * Mediator
     * Commander
     * Responsibility Chain
+    * Iterator
 
 * **Other patterns** :wrench: Not available yet
 
