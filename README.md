@@ -6,6 +6,8 @@ Collection of exercises made in [Patrones de diseño en JavaScript y NodeJS](htt
 
 The course language is Spanish but exercises are written and commented in English for a global understanding.
 
+Just to be clear, some of the patterns are not patterns actually but methodologies and techniques.
+
 ## 📖 Summary
 
 * **Creation patterns**
@@ -34,6 +36,8 @@ The course language is Spanish but exercises are written and commented in Englis
     * Iterator
 
 * **Other patterns** :wrench: Not available yet
+    * IIFE (Immediated Invoke Function Expression)
+    * Dependencies Injection
 
 ## :earth_africa: Languages
 
