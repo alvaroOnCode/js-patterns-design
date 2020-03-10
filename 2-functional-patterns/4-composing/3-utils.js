@@ -1,4 +1,6 @@
 const utils = {
+  trace: x => y => console.log(x, y),
+
   pipe: (...fns) => input => fns.reduce((allFns, currentFn) => currentFn(allFns), input),
 
   compose: (...fns) => input => fns.reduceRight((allFns, currentFn) => currentFn(allFns), input),
