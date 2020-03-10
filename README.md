@@ -20,7 +20,7 @@ The course language is Spanish but exercises are written and commented in Englis
     * Currying
     * Compositing
 
-* **Strcuture patterns** :wrench: Not available yet
+* **Structure patterns** :wrench: Not available yet
 
 * **Behaviour patterns** :wrench: Not available yet
 
