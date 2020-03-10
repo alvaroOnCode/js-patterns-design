@@ -26,7 +26,7 @@ The course language is Spanish but exercises are written and commented in Englis
     * Facade
     * Adapter
 
-* **Behaviour patterns** :wrench: Not available yet
+* **Behaviour patterns**
     * Observer
     * Mediator
     * Commander
