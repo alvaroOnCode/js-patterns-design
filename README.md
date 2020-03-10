@@ -35,9 +35,13 @@ Just to be clear, some of the patterns are not patterns actually but methodologi
     * Responsibility Chain
     * Iterator
 
-* **Other patterns** :wrench: Not available yet
+* **Other patterns**
     * IIFE (Immediated Invoke Function Expression)
     * Dependencies Injection
+
+* **Good practices & Tips**
+    * Inheritance Composing
+    * Immutability
 
 ## :earth_africa: Languages
 
