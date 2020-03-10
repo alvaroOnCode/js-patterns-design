@@ -1,3 +1,7 @@
+/**
+ * Composing: Data
+ */
+
 const users = [
   {
     age: 30,

@@ -2,9 +2,7 @@
  * Adapter
  */
 
-/**
- * Example: An API which has performance issues...
- */
+// Example: An API which has performance issues...
 class SomeAPI_OldVersion {
   constructor() {
     this.operations = function(url, options, method) {
@@ -24,9 +22,7 @@ class SomeAPI_OldVersion {
   }
 }
 
-/**
- * Example: The new version to solve the issues
- */
+// Example: The new version to solve the issues
 class SomeAPI_NewVersion {
   constructor() {
     this.get = function(url, options) {
@@ -39,9 +35,7 @@ class SomeAPI_NewVersion {
   }
 }
 
-/**
- * Adapter class
- */
+// Adapter class
 class Adapter {
   constructor() {
     const newAPI = new SomeAPI_NewVersion();

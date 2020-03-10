@@ -27,6 +27,10 @@ The course language is Spanish but exercises are written and commented in Englis
     * Adapter
 
 * **Behaviour patterns** :wrench: Not available yet
+    * Observer
+    * Mediator
+    * Commander
+    * Responsibility Chain
 
 * **Other patterns** :wrench: Not available yet
 

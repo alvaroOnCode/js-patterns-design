@@ -40,7 +40,7 @@ export const withAudit = someModel(auditProps);
  * Code bellow would be in another file.
  */
 
-import withAudit from ('withAudit.js');
+const withAudit = require('withAudit.js');
 
 withAudit('Product', {
   name: String,

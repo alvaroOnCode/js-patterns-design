@@ -1,3 +1,7 @@
+/**
+ * Composing: Utils
+ */
+
 const utils = {
   trace: x => y => console.log(x, y),
 

@@ -46,7 +46,6 @@ console.log(getFirstChildWithPointFree(users));
 
 /**
  * - Warning! -
- * This code is even cleaner than code in 1-composing.js but it can be improved.
- * 😉
+ * This code is even cleaner than code in 1-composing.js but it can be improved 😉.
  * Check 3.x-composing.js and 3-utils.js for the final versions.
  */

@@ -14,14 +14,14 @@ const users = [
     lastName: 'Suárez',
   },
   {
-    age: 35,
-    firstName: 'Anthony',
-    lastName: 'Caballero'
+    age: 11,
+    firstName: 'Claudia',
+    lastName: 'Baeza'
   },
   {
-    age: 33,
-    firstName: 'Rafa',
-    lastName: 'Mariscal'
+    age: 9,
+    firstName: 'Sofía',
+    lastName: 'Baeza'
   }
 ];
 

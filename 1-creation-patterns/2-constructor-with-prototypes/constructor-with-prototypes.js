@@ -22,6 +22,6 @@ console.log(instance);
 
 /**
  * - Warning! -
- * Prototype methods are not visible in Node console. Use the browser console to check them.
+ * Prototype methods are not visible in Node console. Use the browser console.
  * In this case, there should be two methods: constructor and someMethod.
  */

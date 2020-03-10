@@ -1,5 +1,5 @@
 /**
- * Composing | Part 3
+ * Composing | Part 3.1
  */
 
 const users = require('./data.users');
