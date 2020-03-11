@@ -1,4 +1,4 @@
-# :books: JavaScript Patterns Design and More:books: [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+# :books: JavaScript Patterns Design :books: [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 ## 🔖 Description
 
