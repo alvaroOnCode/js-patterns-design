@@ -55,7 +55,8 @@ Enjoy the repo!
     * Functions as Parameters
     * Functions Returning Functions
     * IIFE (Immediately Invoke Function Expression)
-    * Closures :wrench: Not available yet
+    * Closures
+    * Bind, Call and Apply
 
 ## :earth_africa: Languages
 
