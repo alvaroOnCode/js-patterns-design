@@ -6,7 +6,7 @@ Collection of exercises made in [Patrones de diseño en JavaScript y NodeJS](htt
 
 Nicolas Schurmann's course language is Spanish but exercises are written and commented in English for a global understanding.
 
-First course exercises will be marked with an **A** and the second will be marked with a **B**.
+First course exercises will be marked with an **A** and the second ones will be marked with a **B**.
 
 Finally, and just to be clear, some of the patterns are not patterns actually but methodologies, techniques or good practices.
 
