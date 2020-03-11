@@ -1,5 +1,5 @@
 /**
- * IIFE (Immediated Invoke Function Expression)
+ * IIFE (Immediately Invoke Function Expression)
  */
 
 const result = (() => {
