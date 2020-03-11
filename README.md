@@ -8,7 +8,7 @@ Nicolas Schurmann's course language is Spanish but exercises are written and com
 
 First course exercises will be marked with an **A** and the second ones will be marked with a **B**.
 
-Finally, and just to be clear, some of the patterns are not patterns actually but methodologies, techniques or good practices.
+Finally, and just to be clear, some content are not patterns actually but methodologies, techniques or good practices.
 
 Enjoy the repo!
 
@@ -49,6 +49,11 @@ Enjoy the repo!
 
 * **B | Objects and Functions**
     * Function Constructors
+    * Prototype Chain
+    * Creating Objects
+    * Primitives vs Object
+    * Functions as Parameters
+    * Functions Returning Functions
 
 ## :earth_africa: Languages
 
