@@ -58,6 +58,12 @@ Enjoy the repo!
     * Closures
     * Bind, Call and Apply
 
+* **B | Asynchronous JavaScript**
+    * Callbacks (Hell)
+    * Promises
+    * Async/Await :wrench: Not available yet
+    * AJAX Calls :wrench: Not available yet
+
 ## :earth_africa: Languages
 
 * :us: English
