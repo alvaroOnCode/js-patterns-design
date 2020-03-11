@@ -2,46 +2,53 @@
 
 ## 🔖 Description
 
-Collection of exercises made in [Patrones de diseño en JavaScript y NodeJS](https://www.udemy.com/course/patrones-de-diseno-en-javascript-y-nodejs/) course by Nicolas Schurmann.
+Collection of exercises made in [Patrones de diseño en JavaScript y NodeJS](https://www.udemy.com/course/patrones-de-diseno-en-javascript-y-nodejs/) course by Nicolas Schurmann and [The Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) by Jonas Schmedtmann.
 
-The course language is Spanish but exercises are written and commented in English for a global understanding.
+Nicolas Schurmann's course language is Spanish but exercises are written and commented in English for a global understanding.
 
-Just to be clear, some of the patterns are not patterns actually but methodologies and techniques.
+First course exercises will be marked with an **A** and the second will be marked with a **B**.
+
+Finally, and just to be clear, some of the patterns are not patterns actually but methodologies, techniques or good practices.
+
+Enjoy the repo!
 
 ## 📖 Summary
 
-* **Creation patterns**
-    * Constructor pattern
-    * Constructor pattern with prototypes
-    * Module pattern
-    * Prototype pattern
+* **A | Creation patterns**
+    * Constructor Pattern
+    * Constructor Pattern with Prototypes
+    * Module Pattern
+    * Prototype Pattern
 
-* **Functional patterns**
+* **A | Functional patterns**
     * Closures
-    * Point free
+    * Point Free
     * Currying
     * Compositing
 
-* **Structure patterns**
+* **A | Structure patterns**
     * Mixin
     * Decorator
     * Facade
     * Adapter
 
-* **Behaviour patterns**
+* **A | Behaviour patterns**
     * Observer
     * Mediator
     * Commander
     * Responsibility Chain
     * Iterator
 
-* **Other patterns**
+* **A | Other patterns**
     * IIFE (Immediated Invoke Function Expression)
     * Dependencies Injection
 
-* **Good practices & Tips**
+* **A | Good practices & Tips**
     * Inheritance Composing
     * Immutability
+
+* **B | Objects and Functions**
+    * Function Constructors
 
 ## :earth_africa: Languages
 
