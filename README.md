@@ -40,7 +40,7 @@ Enjoy the repo!
     * Iterator
 
 * **A | Other patterns**
-    * IIFE (Immediated Invoke Function Expression)
+    * IIFE (Immediately Invoke Function Expression)
     * Dependencies Injection
 
 * **A | Good practices & Tips**
@@ -54,6 +54,8 @@ Enjoy the repo!
     * Primitives vs Object
     * Functions as Parameters
     * Functions Returning Functions
+    * IIFE (Immediately Invoke Function Expression)
+    * Closures :wrench: Not available yet
 
 ## :earth_africa: Languages
 
