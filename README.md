@@ -8,6 +8,8 @@ Nicolas Schurmann's course language is Spanish but exercises are written and com
 
 First course exercises will be marked with an **A** and the second ones will be marked with a **B**.
 
+In this repo, binary files as images are managed with [Git LFS](https://git-lfs.github.com/).
+
 Finally, and just to be clear, some content are not patterns actually but methodologies, techniques or good practices.
 
 Enjoy the repo[!](https://github.com/fabbbiob/e-books/blob/master/js/JavaScript%20-%20Patterns-%5BStoyan%20Stefanov%5D.pdf)
