@@ -10,7 +10,7 @@ First course exercises will be marked with an **A** and the second ones will be 
 
 Finally, and just to be clear, some content are not patterns actually but methodologies, techniques or good practices.
 
-Enjoy the repo!
+Enjoy the repo[!](https://github.com/fabbbiob/e-books/blob/master/js/JavaScript%20-%20Patterns-%5BStoyan%20Stefanov%5D.pdf)
 
 ## 📖 Summary
 
@@ -61,7 +61,7 @@ Enjoy the repo!
 * **B | Asynchronous JavaScript**
     * Callbacks (Hell)
     * Promises
-    * Async/Await :wrench: Not available yet
+    * Async/Await
     * AJAX Calls :wrench: Not available yet
 
 ## :earth_africa: Languages
