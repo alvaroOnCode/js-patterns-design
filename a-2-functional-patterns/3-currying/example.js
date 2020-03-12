@@ -13,11 +13,13 @@ function foo(a) {
         return (c) => {
           console.log(`${c} < ${b}! < ${a}`);
         };
+      } else {
+        return () => console.log('Your second param is wrong.');
       }
     }
   }
 
-  return () => () => console.error('You failed.');
+  return () => () => console.error('Your first param is wrong.');
 }
 
 // OK
@@ -26,6 +28,7 @@ foo('a')('B')('c');
 
 // KO
 foo('x')('B')('c');
+foo('a')('y')('c');
 
 /**
  * 😘 With love to WarmiWeb.
