@@ -62,7 +62,10 @@ Enjoy the repo[!](https://github.com/fabbbiob/e-books/blob/master/js/JavaScript%
     * Callbacks (Hell)
     * Promises
     * Async/Await
-    * AJAX Calls :wrench: Not available yet
+    * AJAX Calls
+
+* **Utils** :zap:
+    * Utils 
 
 ## :earth_africa: Languages
 
