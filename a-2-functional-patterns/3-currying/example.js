@@ -13,9 +13,9 @@ function foo(a) {
         return (c) => {
           console.log(`${c} < ${b}! < ${a}`);
         };
-      } else {
-        return () => console.log('Your second param is wrong.');
       }
+
+      return () => console.log('Your second param is wrong.');
     }
   }
 
