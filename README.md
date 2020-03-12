@@ -66,6 +66,9 @@ Enjoy the repo[!](https://github.com/fabbbiob/e-books/blob/master/js/JavaScript%
     * Async/Await
     * AJAX Calls
 
+* **B | Forkify** :wrench: Not available yet
+    * Sample project using ES6, NPM, Babel and Webpack
+
 * **Utils** :zap:
     * Utils 
 
