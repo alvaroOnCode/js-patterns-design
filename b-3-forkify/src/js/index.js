@@ -2,8 +2,7 @@
  * Global app controller
  */
 
-import searchController from './controllers/search';
-import A from './controllers/A';
+import SearchController from './controllers/Search';
 
 /**
  * Global app state
@@ -15,11 +14,4 @@ import A from './controllers/A';
 
 const state = {};
 
-console.log(A);
-
-const a = A('What', 'the');
-const b = new a('fuck!');
-b.foo();
-
-console.log(a);
-console.log(b);
+const sca = SearchController(state);

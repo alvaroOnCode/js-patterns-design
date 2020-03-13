@@ -1,6 +1,6 @@
 import { request } from '../utils/utils';
 
-export default class Search {
+export default class SearchModel {
   constructor(query) {
     this.query = query;
   }
@@ -15,8 +15,6 @@ export default class Search {
     try {
       const res = await request(options);
       this.recipes = JSON.parse(res).recipes;
-
-      return this.recipes;
     } catch(error) {
       console.error(error);
     }
