@@ -2,6 +2,7 @@
  * Global App Controller
  */
 
+import RecipeController from './controllers/Recipe';
 import SearchController from './controllers/Search';
 
 /**
@@ -18,5 +19,8 @@ const state = {
   }
 };
 
+// Init RecipeController
+RecipeController(state);
+
 // Init SearchController
-const sca = SearchController(state);
+SearchController(state);

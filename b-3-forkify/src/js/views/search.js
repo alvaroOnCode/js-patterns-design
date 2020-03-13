@@ -41,17 +41,62 @@ export default (components, elements, namesInDOM) => new class SearchView {
     return title;
   }
 
-  renderRecipe = (recipe) => {
+  renderRecipe = recipe => {
     recipe.title = this.limitRecipeTitle(recipe.title);
     elements.search.results.list.insertAdjacentHTML('beforeend', components.result.recipe(recipe));
   }
 
-  renderResults = (recipes) => {
-    recipes.forEach(this.renderRecipe); 
+  renderResults = (recipes, page = 1, perPage = 10) => {
+    // Current page results
+    const start = (page - 1) * perPage;
+    const end = start + perPage;
+
+    recipes.slice(start, end).forEach(this.renderRecipe);
+
+    // Pagination buttons
+    this.renderPagButtons(page, recipes.length, perPage);
   }
 
   clearResults = () => {
     elements.search.results.list.innerHTML = '';
+  }
+
+  getPagButton = components.pagButton;
+
+  renderPagButtons = (page, totalResults, perPage) => {
+    const pages = Math.ceil(totalResults / perPage);
+
+    if (pages > 1) {
+      let btns = '';
+
+      if (page === 1) {
+        btns = this.getPagButton({
+          type: 'next',
+          page
+        });
+      } else if (page > 1 && page < pages) {
+        btns = `
+          ${this.getPagButton({
+            type: 'prev',
+            page
+          })}
+          ${this.getPagButton({
+            type: 'next',
+            page
+          })}`;
+      } else if (pages === pages) {
+        btns = this.getPagButton({
+          type: 'prev',
+          page
+        });
+      }
+
+      elements.search.results.pages.insertAdjacentHTML('afterbegin', btns);
+    }
+  }
+
+  clearPagButtons = () => {
+    elements.search.results.pages.innerHTML = '';
   }
   
   renderLoader = parent => {
