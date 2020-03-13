@@ -3,9 +3,15 @@
  */
 
 export const components = {
+  loader: className => `
+    <div class="${className}">
+      <svg>
+        <use href="img/icons.svg#icon-cw"></use>
+      </svg>
+    </div>`
+  ,
   result: {
-    recipe: (recipe) => {
-      return `
+    recipe: recipe => `
         <li>
           <a class="results__link" href="#${recipe.recipe_id}">
             <figure class="results__fig">
@@ -16,8 +22,7 @@ export const components = {
               <p class="results__author">${recipe.publisher}</p>
             </div>
           </a>
-        </li>`;
-    }
+        </li>`
   }
 };
 
@@ -26,7 +31,12 @@ export const elements = {
     form: document.querySelector('.search'),
     input: document.querySelector('.search__field'),
     results: {
-      list: document.querySelector('.results__list')
+      list: document.querySelector('.results__list'),
+      main: document.querySelector('.results')
     }
   }
+};
+
+export const namesInDOM = {
+  loader: 'loader'
 };
