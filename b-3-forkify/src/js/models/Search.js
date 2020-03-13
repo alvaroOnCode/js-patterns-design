@@ -1,3 +1,7 @@
+/**
+ * SearchModel
+ */
+
 import { request } from '../utils/utils';
 
 export default class SearchModel {

@@ -1,17 +1,22 @@
 /**
- * Global app controller
+ * Global App Controller
  */
 
 import SearchController from './controllers/Search';
 
 /**
- * Global app state
- * - Search object
- * - Current Recipe object
- * - Shopping List object
- * - Liked recipes
+ * Global App State
+ *  - Search object
+ *    · Current recipes
+ *  - Shopping list
+ *  - Liked recipes
  */
 
-const state = {};
+const state = {
+  search: {
+    recipes: []
+  }
+};
 
+// Init SearchController
 const sca = SearchController(state);

@@ -1,13 +1,22 @@
+/**
+ * SearchController
+ */
+
 import SearchModel from '../models/Search';
-import searchView from '../views/search';
+import SearchView from '../views/Search';
+
+import { components, elements } from '../views/base';
 
 export default (state) => new class SearchController {
   constructor() {
     this.init();
+
+    // Init SearchView
+    this.view = SearchView(components, elements);
   }
 
   init() {
-    document.querySelector('.search')
+    elements.search.form
       .addEventListener('submit', event => {
         event.preventDefault();
         this.controlSearch();
@@ -15,8 +24,8 @@ export default (state) => new class SearchController {
   }
 
   async controlSearch() {
-    // TODO: Get the query from the view
-    const query = 'pizza';
+    // Get the query from the view
+    const query = this.view.getInput();
 
     if (query) {
       // Create a new Search object and set the global state
@@ -28,7 +37,7 @@ export default (state) => new class SearchController {
       await state.search.getResults();
 
       // Render results on UI
-      console.log('Results:', state.search.recipes);
+      this.view.renderResults(state.search.recipes);
     }
   }
 };
