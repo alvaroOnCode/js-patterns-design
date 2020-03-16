@@ -58,7 +58,7 @@ export default (state) => new class SearchController {
         common.clearLoader(document.querySelector(`.${namesInDOM.loader}`));
         this.view.renderResults(state.search.recipes);
       } catch(error) {
-        comsole.error(errror)
+        console.error(error)
       }
     }
   }

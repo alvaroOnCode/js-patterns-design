@@ -30,6 +30,14 @@ export default (state) => new class RecipeController {
       this.view.clearRecipe();
       common.renderLoader(elements.search.results.main, components.loader(namesInDOM.loader));
 
+      /**
+       * - Warning! -
+       * // Highlight selected Search item
+       * if (state.search) {
+       *   state.controllers.search.view.highlightSelected(id);
+       * }
+       */
+
       // Create new RecipeModel object and set the App state
       state.recipe = new RecipeModel(id);
 

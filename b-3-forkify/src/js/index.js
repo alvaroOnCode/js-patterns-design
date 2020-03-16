@@ -14,6 +14,10 @@ import SearchController from './controllers/Search';
  */
 
 const state = {
+  controllers: {
+    recipe: null,
+    search: null
+  },
   recipe: {},
   search: {
     recipes: []
@@ -21,7 +25,7 @@ const state = {
 };
 
 // Init RecipeController
-const rc = RecipeController(state);
+state.controllers.recipe = RecipeController(state);
 
 // Init SearchController
-const sc = SearchController(state);
+state.controllers.search = SearchController(state);

@@ -99,16 +99,17 @@ export default (components, elements, namesInDOM) => new class SearchView {
   clearPagButtons = () => {
     elements.search.results.pages.innerHTML = '';
   }
-  
-  renderLoader = parent => {
-    parent.insertAdjacentHTML('afterbegin', components.loader(namesInDOM.loader));
-  }
 
-  clearLoader = () => {
-    const loader = document.querySelector(`.${namesInDOM.loader}`);
+  highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.results__link'));
 
-    if (loader) {
-      loader.parentElement.removeChild(loader);
+    if (resultsArr.length > 0) {
+      resultsArr.forEach(el => {
+        el.classList.remove('results__link--active');
+      });
+      
+      const link = document.querySelector(`.results__link[href*="${id}"]`);
+      link.classList.add('results__link--active');
     }
   }
 };

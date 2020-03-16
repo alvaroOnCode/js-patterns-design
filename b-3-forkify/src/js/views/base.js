@@ -21,17 +21,27 @@ export const components = {
       <div class="recipe__count">${ing.count}</div>
       
       <div class="recipe__ingredient">
-        <span class="recipe__unit">${ing.unit}</span>${ing.ingredient}
+        <span class="recipe__unit">${ing.unit} </span>${ing.ingredient}
       </div>
-    </li>`
-  ,
+    </li>`,
   loader: className => `
     <div class="${className}">
       <svg>
         <use href="img/icons.svg#icon-cw"></use>
       </svg>
-    </div>`
-  ,
+    </div>`,
+  pagButton: btn => `
+    <button class="btn-inline results__btn--${btn.type}" data-goto=${btn.type === 'prev' ? btn.page - 1 : btn.page + 1}>
+      <svg class="search__icon" style="display:${btn.type === 'prev' ? 'block' : 'none'}">
+        <use href="img/icons.svg#icon-triangle-left"></use>
+      </svg>
+
+      <span>Page ${btn.type === 'prev' ? btn.page - 1 : btn.page + 1}</span>
+
+      <svg class="search__icon" style="display:${btn.type === 'prev' ? 'none' : 'block'}">
+        <use href="img/icons.svg#icon-triangle-right"></use>
+      </svg>
+    </button>`,
   recipe: recipe => `
     <figure class="recipe__fig">
       <img src="${recipe.image_url}" alt="${recipe.title}" class="recipe__img">
@@ -112,8 +122,7 @@ export const components = {
           <use href="img/icons.svg#icon-triangle-right"></use>
         </svg>
       </a>
-    </div>`
-  ,
+    </div>`,
   result: {
     recipe: recipe => `
         <li>
@@ -137,7 +146,8 @@ export const elements = {
     input: document.querySelector('.search__field'),
     results: {
       list: document.querySelector('.results__list'),
-      main: document.querySelector('.results')
+      main: document.querySelector('.results'),
+      pages: document.querySelector('.results__pages')
     }
   }
 };

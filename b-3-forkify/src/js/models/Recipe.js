@@ -69,7 +69,7 @@ export default class RecipeModel {
       });
 
       // Remove parenthesis
-      ing = ing.replace(/ *\([^)]*\) */g, "");
+      ing = ing.replace(/ *\([^)]*\) */g, " ");
 
       // Parse ingredients into counts, units and ingredient
       const arrayIng = ing.split(' ');
