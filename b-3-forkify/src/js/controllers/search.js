@@ -5,17 +5,18 @@
 import SearchModel from '../models/Search';
 import SearchView from '../views/Search';
 
-import { components, elements, namesInDOM } from '../views/base';
+import { common, components, elements, namesInDOM } from '../views/base';
 
 export default (state) => new class SearchController {
   constructor() {
     this.init();
-
-    // Init SearchView
-    this.view = SearchView(components, elements, namesInDOM);
   }
 
   init() {
+    // Init SearchView
+    this.view = SearchView(components, elements, namesInDOM);
+
+    // Add listeners
     elements.search.form
       .addEventListener('submit', event => {
         event.preventDefault();
@@ -28,20 +29,24 @@ export default (state) => new class SearchController {
     const query = this.view.getInput();
 
     if (query) {
-      // Create a new Search object and set the global state
-      state.search = new SearchModel(query);
-
       // Prepare UI for search results
       this.view.clearInput();
       this.view.clearResults();
-      this.view.renderLoader(elements.search.results.main);
+      common.renderLoader(elements.search.results.main, components.loader(namesInDOM.loader));
 
-      // Search for recipes
-      await state.search.getResults();
+      // Create a new SearchModel object and set the App state
+      state.search = new SearchModel(query);
 
-      // Render results on UI
-      this.view.clearLoader();
-      this.view.renderResults(state.search.recipes);
+      try {
+        // Search for recipes
+        await state.search.getResults();
+
+        // Render results on UI
+        common.clearLoader(document.querySelector(`.${namesInDOM.loader}`));
+        this.view.renderResults(state.search.recipes);
+      } catch(error) {
+        comsole.error(errror)
+      }
     }
   }
 };

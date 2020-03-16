@@ -14,7 +14,7 @@ export default class SearchModel {
       url: `https://forkify-api.herokuapp.com/api/search?&q=${this.query}`,
       method: 'GET',
       async: true
-    }
+    };
 
     try {
       const res = await request(options);

@@ -1,11 +1,12 @@
 /**
- * Global App Controller
+ * App Controller
  */
 
+import RecipeController from './controllers/Recipe';
 import SearchController from './controllers/Search';
 
 /**
- * Global App State
+ * App State
  *  - Search object
  *    · Current recipes
  *  - Shopping list
@@ -13,10 +14,14 @@ import SearchController from './controllers/Search';
  */
 
 const state = {
+  recipe: {},
   search: {
     recipes: []
   }
 };
 
+// Init RecipeController
+const rc = RecipeController(state);
+
 // Init SearchController
-const sca = SearchController(state);
+const sc = SearchController(state);

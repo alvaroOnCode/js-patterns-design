@@ -23,6 +23,7 @@ export default (components, elements, namesInDOM) => new class SearchView {
    * acc = 27 | acc + cur.length = 34 | 31 <= limit = false | newTitle = ['Carrillada', 'al', 'Pedro']
    * acc = 34 | acc + cur.length = 40 | 37 <= limit = false | newTitle = ['Carrillada', 'al', 'Pedro']
    */
+
   limitRecipeTitle = (title, limit = 15) => {
     const newTitle = [];
 
