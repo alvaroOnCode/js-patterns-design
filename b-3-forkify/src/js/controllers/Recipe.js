@@ -5,6 +5,8 @@
 import RecipeModel from '../models/Recipe';
 import RecipeView from '../views/Recipe';
 
+import SearchView from '../views/Search';
+
 import { common, components, elements, namesInDOM } from '../views/base';
 
 export default (state) => new class RecipeController {
@@ -29,14 +31,14 @@ export default (state) => new class RecipeController {
       // Prepare UI for changes
       this.view.clearRecipe();
       common.renderLoader(elements.search.results.main, components.loader(namesInDOM.loader));
-
+      
       /**
        * - Warning! -
-       * // Highlight selected Search item
-       * if (state.search) {
-       *   state.controllers.search.view.highlightSelected(id);
-       * }
+       * Another SearchView instance should not be needed 😥
        */
+
+      // Highlight selected Search item
+      SearchView(components, elements, namesInDOM).highlightSelected(id);
 
       // Create new RecipeModel object and set the App state
       state.recipe = new RecipeModel(id);
