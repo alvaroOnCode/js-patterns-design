@@ -47,9 +47,11 @@ export default state => new class ListController {
 
   controlList = () => {
     // Add each ingredient to the list and UI
-    state.recipe.ingredients.forEach(element => {
-      const item = state.list.addItem(element.count, element.unit, element.ingredient);
-      this.view.renderItem(item);
-    });
+    if (state.list.item.length === 0) {
+      state.recipe.ingredients.forEach(element => {
+        const item = state.list.addItem(element.count, element.unit, element.ingredient);
+        this.view.renderItem(item);
+      });
+    }
   }
 };
