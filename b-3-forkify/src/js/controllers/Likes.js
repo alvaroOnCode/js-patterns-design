@@ -13,9 +13,6 @@ export default state => new class LikesController {
   }
 
   init = () => {
-    // Init LikesModel
-    state.likes = LikesModel;
-
     // Init LikesView
     this.view = LikesView(components, elements);
 
@@ -26,9 +23,23 @@ export default state => new class LikesController {
           this.controlLike();
         }
       });
+
+    // Restore liked recipes on page load
+    window.addEventListener('load', () => {
+      // Init LikesModel
+      state.likes = LikesModel;
+
+      // Restore likes
+      state.likes.readLocalStorage();
+
+      // Render existing likes
+      state.likes.likes.forEach(like => this.view.renderLike(like));
+
+      // Set Likes menu visibility
+      this.view.toggleLikeMenu(state.likes.getTotalLikes());
+    });
     
-    // Set Likes menu visibility
-    this.view.toggleLikeMenu(state.likes.getTotalLikes());
+    
   }
 
   controlLike() {
