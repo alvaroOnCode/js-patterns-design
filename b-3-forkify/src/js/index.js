@@ -2,6 +2,7 @@
  * App Controller
  */
 
+import ListController from './controllers/List';
 import RecipeController from './controllers/Recipe';
 import SearchController from './controllers/Search';
 
@@ -14,11 +15,15 @@ import SearchController from './controllers/Search';
  */
 
 const state = {
+  list: {},
   recipe: {},
   search: {
     recipes: []
   }
 };
+
+// Init ListController
+ListController(state);
 
 // Init RecipeController
 RecipeController(state);

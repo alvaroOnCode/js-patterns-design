@@ -42,7 +42,7 @@ export const components = {
         <use href="img/icons.svg#icon-triangle-right"></use>
       </svg>
     </button>`,
-  recipe: recipe => `
+  recipe: (recipe, ingredients) => `
     <figure class="recipe__fig">
       <img src="${recipe.image_url}" alt="${recipe.title}" class="recipe__img">
       
@@ -72,13 +72,13 @@ export const components = {
         <span class="recipe__info-text"> servings</span>
 
         <div class="recipe__info-buttons">
-          <button class="btn-tiny">
+          <button class="btn-tiny btn-decrease">
             <svg>
               <use href="img/icons.svg#icon-circle-with-minus"></use>
             </svg>
           </button>
           
-          <button class="btn-tiny">
+          <button class="btn-tiny btn-increase">
             <svg>
               <use href="img/icons.svg#icon-circle-with-plus"></use>
             </svg>
@@ -95,10 +95,10 @@ export const components = {
         
     <div class="recipe__ingredients">
       <ul class="recipe__ingredient-list">
-        ${recipe.ingredients}
+        ${ingredients}
       </ul>
 
-      <button class="btn-small recipe__btn">
+      <button class="btn-small recipe__btn recipe__btn--add">
         <svg class="search__icon">
           <use href="img/icons.svg#icon-shopping-cart"></use>
         </svg>
@@ -136,11 +136,28 @@ export const components = {
             </div>
           </a>
         </li>`
-  }
+  },
+  shoppingListItem: item => `
+    <li class="shopping__item" data-itemid="${item.id}">
+      <div class="shopping__count">
+        <input type="number" value="${item.count}" min="0" step="${item.count}" class="shopping__count-value">
+        <p>${item.unit}</p>
+      </div>
+
+      <p class="shopping__description">${item.ing}</p>
+
+      <button class="shopping__delete btn-tiny">
+        <svg>
+          <use href="img/icons.svg#icon-circle-with-cross"></use>
+        </svg>
+      </button>
+    </li>`
 };
 
 export const elements = {
-  recipe: document.querySelector('.recipe'),
+  recipe: {
+    main: document.querySelector('.recipe')
+  },
   search: {
     form: document.querySelector('.search'),
     input: document.querySelector('.search__field'),
@@ -149,6 +166,9 @@ export const elements = {
       main: document.querySelector('.results'),
       pages: document.querySelector('.results__pages')
     }
+  },
+  shoppingList: {
+    main: document.querySelector('.shopping__list')
   }
 };
 

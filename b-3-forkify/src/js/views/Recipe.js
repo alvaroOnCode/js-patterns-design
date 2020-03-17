@@ -36,11 +36,22 @@ export default (components, elements, namesInDOM) => new class RecipeView {
   }
 
   renderRecipe = recipe => {
-    recipe.ingredients = this.renderIngredients(recipe.ingredients);
-    elements.recipe.insertAdjacentHTML('afterbegin', components.recipe(recipe));
+    const ingredients = this.renderIngredients(recipe.ingredients);
+    elements.recipe.main.insertAdjacentHTML('afterbegin', components.recipe(recipe, ingredients));
   }
 
   clearRecipe() {
-    elements.recipe.innerHTML = '';
+    elements.recipe.main.innerHTML = '';
+  }
+
+  updateServingsIngredients = recipe => {
+    // Servings
+    document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
+
+    // Ingredients
+    const countElements = Array.from(document.querySelectorAll('.recipe__count'));
+    countElements.forEach((count, index) => {
+      count.textContent = this.formatIngredientCount(recipe.ingredients[index].count);
+    });
   }
 };

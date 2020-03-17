@@ -9,7 +9,7 @@ import SearchView from '../views/Search';
 
 import { common, components, elements, namesInDOM } from '../views/base';
 
-export default (state) => new class RecipeController {
+export default state => new class RecipeController {
   constructor() {
     this.init();
   }
@@ -21,6 +21,19 @@ export default (state) => new class RecipeController {
     // Add listeners
     const listeners = ['hashchange', 'load'];
     listeners.forEach(event => window.addEventListener(event, this.controlRecipe));
+
+    elements.recipe.main
+      .addEventListener('click', event => {
+        if (event.target.matches('.btn-decrease, .btn-decrease *')) {
+          if (state.recipe.servings > 1) {
+            state.recipe.updateServings('dec');
+            this.view.updateServingsIngredients(state.recipe);
+          }
+        } else if (event.target.matches('.btn-increase, .btn-increase *')) {
+          state.recipe.updateServings('inc');
+          this.view.updateServingsIngredients(state.recipe);
+        }
+      });
   }
 
   controlRecipe = async () => {

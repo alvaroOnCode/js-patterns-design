@@ -7,7 +7,7 @@ import SearchView from '../views/Search';
 
 import { common, components, elements, namesInDOM } from '../views/base';
 
-export default (state) => new class SearchController {
+export default state => new class SearchController {
   constructor() {
     this.init();
   }
