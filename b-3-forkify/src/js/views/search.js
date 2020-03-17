@@ -2,7 +2,7 @@
  * SearchView
  */
 
-export default (components, elements, namesInDOM) => new class SearchView {
+export default (components, elements) => new class SearchView {
   constructor() {}
 
   getInput = () => {
@@ -43,8 +43,8 @@ export default (components, elements, namesInDOM) => new class SearchView {
   }
 
   renderRecipe = recipe => {
-    recipe.title = this.limitRecipeTitle(recipe.title);
-    elements.search.results.list.insertAdjacentHTML('beforeend', components.result.recipe(recipe));
+    const shortTitle = this.limitRecipeTitle(recipe.title);
+    elements.search.results.list.insertAdjacentHTML('beforeend', components.result.recipe(recipe, shortTitle));
   }
 
   renderResults = (recipes, page = 1, perPage = 10) => {

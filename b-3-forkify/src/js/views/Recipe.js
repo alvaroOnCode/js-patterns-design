@@ -4,7 +4,7 @@
 
 import { Fraction } from 'fractional';
 
-export default (components, elements, namesInDOM) => new class RecipeView {
+export default (components, elements) => new class RecipeView {
   constructor() {}
 
   formatIngredientCount = count => {
@@ -35,9 +35,9 @@ export default (components, elements, namesInDOM) => new class RecipeView {
     return ings.join('');
   }
 
-  renderRecipe = recipe => {
+  renderRecipe = (recipe, isLiked) => {
     const ingredients = this.renderIngredients(recipe.ingredients);
-    elements.recipe.main.insertAdjacentHTML('afterbegin', components.recipe(recipe, ingredients));
+    elements.recipe.main.insertAdjacentHTML('afterbegin', components.recipe(recipe, isLiked, ingredients));
   }
 
   clearRecipe() {

@@ -2,7 +2,7 @@
  * ListView
  */
 
-export default (components, elements, namesInDOM) => new class ListView {
+export default (components, elements) => new class ListView {
   constructor() {}
 
   renderItem = item => {

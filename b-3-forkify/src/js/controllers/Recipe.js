@@ -16,7 +16,7 @@ export default state => new class RecipeController {
 
   init = () => {
     // Init RecipeView
-    this.view = RecipeView(components, elements, namesInDOM);
+    this.view = RecipeView(components, elements);
 
     // Add listeners
     const listeners = ['hashchange', 'load'];
@@ -51,7 +51,7 @@ export default state => new class RecipeController {
        */
 
       // Highlight selected Search item
-      SearchView(components, elements, namesInDOM).highlightSelected(id);
+      SearchView(components, elements).highlightSelected(id);
 
       // Create new RecipeModel object and set the App state
       state.recipe = new RecipeModel(id);
@@ -67,7 +67,7 @@ export default state => new class RecipeController {
         
         // Render Recipe
         common.clearLoader(document.querySelector(`.${namesInDOM.loader}`));
-        this.view.renderRecipe(state.recipe);
+        this.view.renderRecipe(state.recipe, state.likes.isLiked(id));
       } catch(error) {
         console.error(error);
       }

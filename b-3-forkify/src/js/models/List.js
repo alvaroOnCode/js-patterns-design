@@ -6,7 +6,7 @@ import uniqid from 'uniqid';
 
 export default new class ListModel {
   constructor() {
-    this.item = [];
+    this.items = [];
   }
 
   addItem(count, unit, ing) {
@@ -17,17 +17,17 @@ export default new class ListModel {
       ing
     };
 
-    this.item.push(item);
+    this.items.push(item);
 
     return item;
   }
 
   deleteItem(id) {
-    const index = this.item.findIndex(item => item.id === id);
-    this.item.splice(index, 1);
+    const index = this.items.findIndex(item => item.id === id);
+    this.items.splice(index, 1);
   }
 
   updateCount(id, newCount) {
-    this.item.find(item => item.id == id).count = newCount;
+    this.items.find(item => item.id == id).count = newCount;
   }
 };

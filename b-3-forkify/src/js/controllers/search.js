@@ -14,7 +14,7 @@ export default state => new class SearchController {
 
   init() {
     // Init SearchView
-    this.view = SearchView(components, elements, namesInDOM);
+    this.view = SearchView(components, elements);
 
     // Add listeners
     elements.search.form

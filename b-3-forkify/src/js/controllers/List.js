@@ -5,7 +5,7 @@
 import ListModel from '../models/List';
 import ListView from '../views/List';
 
-import { common, components, elements, namesInDOM } from '../views/base';
+import { components, elements } from '../views/base';
 
 export default state => new class ListController {
   constructor() {
@@ -13,8 +13,11 @@ export default state => new class ListController {
   }
 
   init = () => {
+    // Init ListModel
+    state.list = ListModel;
+    
     // Init ListView
-    this.view = ListView(components, elements, namesInDOM);
+    this.view = ListView(components, elements);
 
     // Add listeners
     elements.shoppingList.main
@@ -40,14 +43,11 @@ export default state => new class ListController {
           this.controlList();
         }
       });
-
-    // Init ListModel
-    state.list = ListModel;
   }
 
   controlList = () => {
     // Add each ingredient to the list and UI
-    if (state.list.item.length === 0) {
+    if (state.list.items.length === 0) {
       state.recipe.ingredients.forEach(element => {
         const item = state.list.addItem(element.count, element.unit, element.ingredient);
         this.view.renderItem(item);

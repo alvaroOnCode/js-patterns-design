@@ -2,6 +2,7 @@
  * App Controller
  */
 
+import LikesController from './controllers/Likes';
 import ListController from './controllers/List';
 import RecipeController from './controllers/Recipe';
 import SearchController from './controllers/Search';
@@ -21,6 +22,9 @@ const state = {
     recipes: []
   }
 };
+
+// Init ListController
+LikesController(state);
 
 // Init ListController
 ListController(state);

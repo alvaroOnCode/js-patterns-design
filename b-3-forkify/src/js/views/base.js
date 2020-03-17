@@ -42,12 +42,12 @@ export const components = {
         <use href="img/icons.svg#icon-triangle-right"></use>
       </svg>
     </button>`,
-  recipe: (recipe, ingredients) => `
+  recipe: (recipe, isLiked, ingredients) => `
     <figure class="recipe__fig">
       <img src="${recipe.image_url}" alt="${recipe.title}" class="recipe__img">
       
       <h1 class="recipe__title">
-        <span>${recipe.title}</span>
+        <span>🍴 ${recipe.title} 🍴</span>
       </h1>
     </figure>
 
@@ -88,7 +88,7 @@ export const components = {
 
       <button class="recipe__love">
         <svg class="header__likes">
-          <use href="img/icons.svg#icon-heart-outlined"></use>
+          <use href="img/icons.svg#icon-heart${isLiked ? '' : '-outlined'}"></use>
         </svg>
       </button>
     </div>
@@ -124,14 +124,14 @@ export const components = {
       </a>
     </div>`,
   result: {
-    recipe: recipe => `
+    recipe: (recipe, shortTitle) => `
         <li>
           <a class="results__link" href="#${recipe.recipe_id}">
             <figure class="results__fig">
               <img src="${recipe.image_url}" alt="${recipe.title}">
             </figure>
             <div class="results__data">
-              <h4 class="results__name">${recipe.title}</h4>
+              <h4 class="results__name">${shortTitle}</h4>
               <p class="results__author">${recipe.publisher}</p>
             </div>
           </a>
@@ -151,10 +151,27 @@ export const components = {
           <use href="img/icons.svg#icon-circle-with-cross"></use>
         </svg>
       </button>
+    </li>`,
+  likesListItem: (like, shortTitle) => `
+    <li>
+      <a class="likes__link" href="#${like.id}">
+        <figure class="likes__fig">
+          <img src="${like.img}" alt="${like.title}">
+        </figure>
+
+        <div class="likes__data">
+          <h4 class="likes__name">${shortTitle}</h4>
+          <p class="likes__author">${like.publisher}</p>
+        </div>
+      </a>
     </li>`
 };
 
 export const elements = {
+  likes: {
+    list: document.querySelector('.likes__list'),
+    menu: document.querySelector('.likes__field')
+  },
   recipe: {
     main: document.querySelector('.recipe')
   },
