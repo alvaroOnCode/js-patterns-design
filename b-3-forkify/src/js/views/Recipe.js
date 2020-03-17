@@ -8,18 +8,21 @@ export default (components, elements) => new class RecipeView {
   constructor() {}
 
   formatIngredientCount = count => {
-    const [int, dec] = count.toString().split('.').map(item => parseInt(item, 10));
+    // count = 2.5 | 5/2 | 2 1/2
+    // count = 0.5 | 1/2
+    const newCount = Math.round((count * 10000) / 10000);
+    const [int, dec] = newCount.toString().split('.').map(item => parseInt(item, 10));
 
     if (!dec) {
-      return count;
+      return newCount;
     }
 
     let result = '';
     if (int === 0) {
-      const fr = new Fraction(count);
+      const fr = new Fraction(newCount);
       result = `${fr.numerator}/${fr.denominator}`;
     } else {
-      const fr = new Fraction(count - int);
+      const fr = new Fraction(newCount - int);
       result = `${int} ${fr.numerator}/${fr.denominator}`;
     }
     
