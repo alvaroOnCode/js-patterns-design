@@ -66,10 +66,10 @@ Enjoy the repo[!](https://github.com/fabbbiob/e-books/blob/master/js/JavaScript%
     * Async/Await
     * AJAX Calls
 
-* **B | Forkify**
+* **B | :fork_and_knife: Forkify :fork_and_knife:**
     * Sample project using ES6, NPM, Babel and Webpack
 
-* **Utils** :zap:
+* **Utils**
     * Utils 
 
 ## :earth_africa: Languages
